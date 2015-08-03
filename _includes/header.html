@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <link rel="cannonical" href="{{ page.url | prepend: site.url }}">
+    <link rel="canonical" href="{{page.url | prepend: site.url}}" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page.description }}">
+    <meta name="description" content="{{page.description}}">
     {% if page.author %}
-    <meta name="author" content="{{ page.author }}">
+    <meta name="author" content="{{page.author}}">
     {% endif %}
     {% if page.coverImg %}
-    <meta property="og:image" content="{{ page.coverImg | prepend: site.url }}">
+    <meta property="og:image" content="{{page.coverImg | prepend: site.url}}" />
     {% endif %}
+
     <title>{{page.title}}</title>
 
     <!-- Bootstrap Core CSS -->
@@ -36,7 +37,10 @@
 </head>
 
 <body>
+
+    <!-- Navigation -->
     {% include nav.html %}
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('{{ site.url }}/img/{{page.coverImg}}')">
@@ -49,15 +53,15 @@
                         
                         {% if page.author %}
                             <h2 class="subheading">{{page.description}}</h2>
-                            <span class="meta">Posted by <a href="#">{{ page.author }}</a> on {{page.date | date_to_string }} </span>
+                            <span class="meta">Posted by <a href="#">{{page.author}}</a> on {{page.date | date_to_string}}</span>
                         {% else %}
                             <span class="subheading">{{page.description}}</span>
-                        {% endif%}
+                        {% endif %}
+
                         <aside class="sharing">
-                            <div class="g-plusone" data-annotation="inline" data-width="300">
-                                
-                            </div>
+                        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
                         </aside>
+
                     </div>
                 </div>
             </div>
