@@ -1,5 +1,6 @@
 markdown: redcarpet
 paginate: 4
+url: /my-jekyll-blog
 
 gems:
  - jekyll-sitemap
